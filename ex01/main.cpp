@@ -14,9 +14,15 @@ int main()
 		robot.beRepaired(10);
 		robot.guardGate();
 
-		std::cout << "\n=== Copy Test ===" << std::endl;
+		std::cout << "\n=== Copy Constructor Test ===" << std::endl;
 
 		ScavTrap copy(robot);
 		copy.attack("Enemy");
+
+		std::cout << "\n=== Copy Assignment Test ===" << std::endl;
+
+		ScavTrap another;
+		another = robot;
+		another.attack("Enemy");
 	}
 }
