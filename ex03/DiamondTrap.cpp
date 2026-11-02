@@ -56,5 +56,5 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "DianmondTrap name: " << _name << ", ClapTrap name: " << ClapTrap::_name << std::endl;
+	std::cout << "DiamondTrap name: " << _name << ", ClapTrap name: " << ClapTrap::_name << std::endl;
 }

@@ -31,6 +31,8 @@ ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
+	std::cout << "ScavTrap copy assignment operator called" << std::endl;
+
 	if (this != &other)
 		ClapTrap::operator=(other);
 	
@@ -55,5 +57,5 @@ void ScavTrap::attack(const std::string& target)
 
 void ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << _name << "is now in Gate keeper mode!" << std::endl;
+	std::cout << "ScavTrap " << _name << " is now in Gate keeper mode!" << std::endl;
 }

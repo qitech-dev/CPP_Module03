@@ -18,6 +18,16 @@ int main()
 		robot.guardGate();
 		robot.highFivesGuys();
 
+		std::cout << "\n=== Energy Test ===" << std::endl;
+
+		DiamondTrap energyTest("EnergyRobot");
+
+		for (int i = 0; i < 50; i++)
+			energyTest.attack("Enemy");
+		
+		energyTest.attack("Enemy");
+		energyTest.beRepaired(10);
+
 		std::cout << "\n=== Copy constructor ===" << std::endl;
 
 		DiamondTrap copy(robot);
