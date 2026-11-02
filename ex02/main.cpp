@@ -25,5 +25,7 @@ int main()
         another.attack("Enemy");
     }
 
+	std::cout << "\n=== End ===" << std::endl;
+
     return 0;
 }

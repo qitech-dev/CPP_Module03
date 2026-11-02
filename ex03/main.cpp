@@ -1,29 +1,36 @@
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 
 int main()
 {
-    std::cout << "=== Basic Test ===" << std::endl;
+	std::cout << "\n=== Basic Test ===" << std::endl;
 
-    {
-        FragTrap robot("Serena");
+	{
+		DiamondTrap robot("Alice");
 
-        robot.attack("Enemy");
-        robot.takeDamage(20);
-        robot.beRepaired(10);
-        robot.highFivesGuys();
+		robot.whoAmI();
+		robot.attack("Enemy");
+		robot.takeDamage(20);
+		robot.beRepaired(10);
 
-        std::cout << "\n=== Copy Constructor Test ===" << std::endl;
+		std::cout << "\n=== Special Abilities ===" << std::endl;
 
-        FragTrap copy(robot);
-        copy.attack("Enemy");
+		robot.guardGate();
+		robot.highFivesGuys();
 
-        std::cout << "\n=== Copy Assignment Test ===" << std::endl;
+		std::cout << "\n=== Copy constructor ===" << std::endl;
 
-        FragTrap another;
-        another = robot;
-        another.attack("Enemy");
-    }
+		DiamondTrap copy(robot);
+		copy.whoAmI();
 
-    return 0;
+		std::cout << "\n=== Copy Assignment ===" << std::endl;
+
+		DiamondTrap another("Bob");
+		another = robot;
+		another.whoAmI();
+	}
+
+	std::cout << "\n=== End ===" << std::endl;
+
+	return 0;
 }
